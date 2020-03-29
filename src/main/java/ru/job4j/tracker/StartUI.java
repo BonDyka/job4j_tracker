@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import ru.job4j.tracker.di.Context;
 import ru.job4j.tracker.start.Input;
 import ru.job4j.tracker.start.MenuTracker;
 import ru.job4j.tracker.start.Tracker;
@@ -44,7 +45,15 @@ public class StartUI {
 	 * @param args list of arguments.
 	 */
 	public static void main(String[] args) {
-		new StartUI(new ValidateInput(), new Tracker(new DBStorage())).init();
+		Context context = new Context();
+		context.reg(ValidateInput.class);
+		context.reg(DBStorage.class);
+		context.reg(Tracker.class);
+		context.reg(StartUI.class);
+
+		StartUI ui = context.get(StartUI.class);
+
+		ui.init();
 	}
 
 	/**
