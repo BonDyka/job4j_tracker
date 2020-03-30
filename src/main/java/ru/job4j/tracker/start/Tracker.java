@@ -1,5 +1,6 @@
 package ru.job4j.tracker.start;
 
+import org.springframework.stereotype.Component;
 import ru.job4j.tracker.models.Item;
 import ru.job4j.tracker.store.Storage;
 
@@ -12,6 +13,7 @@ import java.util.Random;
  * @author abondarev.
  * @since 22.07.2017.
  */
+@Component
 public class Tracker {
 
 	/**

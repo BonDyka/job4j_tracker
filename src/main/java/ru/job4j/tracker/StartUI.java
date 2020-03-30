@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import org.springframework.stereotype.Component;
 import ru.job4j.tracker.di.Context;
 import ru.job4j.tracker.start.Input;
 import ru.job4j.tracker.start.MenuTracker;
@@ -10,6 +11,7 @@ import ru.job4j.tracker.store.DBStorage;
 /**
  *
  */
+@Component
 public class StartUI {
 
 	/**

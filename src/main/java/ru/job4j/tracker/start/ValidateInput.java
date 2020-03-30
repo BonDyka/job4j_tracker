@@ -1,11 +1,14 @@
 package ru.job4j.tracker.start;
 
+import org.springframework.stereotype.Component;
+
 /**
  * The class represents valid input from user with preparing exceptions.
  *
  * @author abondarev.
  * @since 26.07.2017.
  */
+@Component
 public class ValidateInput extends ConsoleInput {
 
 	/**
