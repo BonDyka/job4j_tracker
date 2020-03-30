@@ -6,7 +6,6 @@ import ru.job4j.tracker.start.MenuTracker;
 import ru.job4j.tracker.start.Tracker;
 import ru.job4j.tracker.start.ValidateInput;
 import ru.job4j.tracker.store.DBStorage;
-import ru.job4j.tracker.store.UserStore;
 
 /**
  *
