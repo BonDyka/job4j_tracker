@@ -1,5 +1,6 @@
 package ru.job4j.tracker;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.job4j.tracker.di.Context;
 import ru.job4j.tracker.start.Input;
@@ -22,23 +23,25 @@ public class StartUI {
 	/**
 	 * The instance of input system.
 	 */
+	@Autowired
 	private Input input;
 
 	/**
-	 *
+	 * The instance of Tracker class.
 	 */
-	private ru.job4j.tracker.start.Tracker tracker;
+	@Autowired
+	private Tracker tracker;
 
-	/**
-	 * The constructor.
-	 *
-	 * @param input is an instance of input system.
-	 * @param tracker is container under that execute action.
-	 */
-	public StartUI(Input input, ru.job4j.tracker.start.Tracker tracker) {
-		this.input = input;
-		this.tracker = tracker;
-	}
+//	/**
+//	 * The constructor.
+//	 *
+//	 * @param input is an instance of input system.
+//	 * @param tracker is container under that execute action.
+//	 */
+//	public StartUI(Input input, Tracker tracker) {
+//		this.input = input;
+//		this.tracker = tracker;
+//	}
 
 	/**
 	 * The enter point.

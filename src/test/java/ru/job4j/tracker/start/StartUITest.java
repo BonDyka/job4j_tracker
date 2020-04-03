@@ -24,7 +24,7 @@ public class StartUITest {
 		Tracker tracker = new Tracker(new UserStore());
 		// Stub for input system.
 		Input input = new StubInput(new String[] {"1", "test", "test desc", "7"});
-		new StartUI(input, tracker).init();
+		new StartUI().init();
 		assertThat(tracker.findAll().get(0).getName(), is("test"));
 	}
 
@@ -38,7 +38,7 @@ public class StartUITest {
 		Item item = tracker.add(new Item("test", "test desc", System.currentTimeMillis()));
 		// Stub for input system.
 		Input input = new StubInput(new String[] {"3", item.getId(), "test2", "test desc 2", "7"});
-		new StartUI(input, tracker).init();
+		new StartUI().init();
 		assertThat(tracker.findById(item.getId()).getName(), is("test2"));
 	}
 
@@ -52,7 +52,7 @@ public class StartUITest {
 		Item item = tracker.add(new Item("test", "test desc", System.currentTimeMillis()));
 		// Stub for input system.
 		Input input = new StubInput(new String[] {"4", item.getId(), "7"});
-		new StartUI(input, tracker).init();
+		new StartUI().init();
 		assertThat(tracker.findAll().size(), is(0));
 	}
 }
