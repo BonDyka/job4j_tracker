@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import ru.job4j.tracker.di.Context;
 import ru.job4j.tracker.start.Input;
@@ -13,6 +14,7 @@ import ru.job4j.tracker.store.DBStorage;
  *
  */
 @Component
+@Scope("prototype")
 public class StartUI {
 
 	/**

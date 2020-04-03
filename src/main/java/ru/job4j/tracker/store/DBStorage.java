@@ -2,6 +2,7 @@ package ru.job4j.tracker.store;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import ru.job4j.tracker.models.Comment;
 import ru.job4j.tracker.models.Item;
@@ -18,6 +19,7 @@ import java.util.List;
  * @since 05.01.2018.
  */
 @Component
+@Scope("prototype")
 public class DBStorage implements Storage {
 
     private static final Logger LOG = LoggerFactory.getLogger(DBStorage.class);
