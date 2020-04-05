@@ -1,5 +1,10 @@
 # Tracker
 
 ####Description
-The project implements Tracker System for task tracking
+It is console app that implements Tracker for task.
 
+#### Used technologies
+* java-core
+* jpa
+* spring
+* junit
